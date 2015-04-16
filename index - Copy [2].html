@@ -1,0 +1,125 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.oembed.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.oembed.css"> 
+
+<style type="text/css">
+
+.oembedall-container a{display:none;}
+
+.oembedall-closehide{display:none;}
+
+body {
+
+margin: 0px;
+}
+
+div.oembedall-container {
+margin-top: 0px;
+}
+
+iframe {
+margin-top: -16px;
+}
+
+</style>
+<script>
+
+ $(document).ready(function () {
+	 
+	$('#info').keyup(function(){
+		tagdata = [];
+		eventdata = [];
+		var scriptruns = [];
+		var text = $('#info').val();
+		text = $('<span>'+text+'</span>').text(); //strip html
+		text = text.replace(/(\s|>|^)(https?:[^\s<]*)/igm,'$1<div><a href="$2" class="oembed">$2</a></div>');
+		text = text.replace(/(\s|>|^)(mailto:[^\s<]*)/igm,'$1<div><a href="$2" class="oembed">$2</a></div>');
+	
+		
+			
+		
+		
+		//$('#out').empty().html(text);
+		
+		$(".oembed").oembed(null,{
+			apikeys: {
+				//etsy : 'd0jq4lmfi5bjbrxq2etulmjr',
+				amazon : 'caterwall-20',
+				//eventbrite: 'SKOFRBQRGNQW5VAS6P',
+			},
+			//maxHeight: 200, maxWidth:300
+		});
+		
+	}); 
+		
+ 
+
+
+function getQueryVariable(variable)
+{
+	   //alert(window.location.search.substring(1));
+	   var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       
+	   //alert('vars: ' + vars);
+	   
+	   
+	   
+               var pair = vars[0].split("@");
+			   
+			   
+			   
+               if(pair[0] == variable){
+				   
+				
+						tagdata = [];
+						eventdata = [];
+						var scriptruns = [];
+						var text = pair[1];
+						
+						//alert('text: ' + text);
+						
+						
+						text = $('<span>'+text+'</span>').text(); //strip html
+						text = text.replace(/(\s|>|^)(https?:[^\s<]*)/igm,'$1<div><a href="$2" class="oembed">$2</a></div>');
+						text = text.replace(/(\s|>|^)(mailto:[^\s<]*)/igm,'$1<div><a href="$2" class="oembed">$2</a></div>');
+					
+						
+							
+						
+						
+						$('#out').empty().html(text);
+						
+						$(".oembed").oembed(null,{
+							apikeys: {
+								//etsy : 'd0jq4lmfi5bjbrxq2etulmjr',
+								amazon : 'caterwall-20',
+								//eventbrite: 'SKOFRBQRGNQW5VAS6P',
+							},
+							//maxHeight: 200, maxWidth:300
+						});   
+				   
+				   		
+				   
+			}
+       
+       
+}
+
+
+	getQueryVariable('url');
+	
+ });
+
+</script>
+
+
+</head>
+<body>
+
+<div id="out"></div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* CSS Document */
+
+br{display:none;}
+
+iframe{
+margin-top: 0 !important;
+}
+
+
+
+
+
+
+
+/* short --------------- */
+
+
+.youtube-short iframe{height:61px !important;width: 100%;}
+
+.spotify-short iframe{height:80px !important;/*height:380px !important;*/}
+
+.soundcloud-short iframe{height:180px !important;/*height:400px !important;*/}
+
+.twitter-short iframe{height:150px !important;/*height:400px !important;*/}
+
+.instagram-short iframe{max-width: 100% !important; /*height = 480? */}
+
+.flickr-short iframe{max-width: 100% !important; width: 100% !important; height: 220px !important; /*height = 480? */}
+.vimeo-short iframe{max-width: 100% !important; 
+height: 200px !important; 
+}
+.vine-short iframe{
+height: 400px !important; 
+}
+
+
+.pinterest-short img,
+.airbnb-short img {
+width: 100% !important;
+height: inherit !important;
+/*height: 350px; */
+}
+
+.airbnb-short p,
+.pinterest-short p {
+	font-size:8px;
+}
+
+/* full --------------- */
+.youtube-full{ background-color:#000;}
+.youtube-full iframe{height:100% !important;width: 100%;}
+
+.prezi-full{
+background-color:#000; 
+}
+.prezi-full embed{height:inherit !important; width:100%;}
+
+.dribbble-full{background-color:#000;}
+.dribbble-full img {
+width: 100% !important;
+height: inherit !important;
+/*height: 350px; */
+}
+
+
+.spotify-full{ background-color:#000;}
+.spotify-full iframe{height:380px !important;}
+
+.soundcloud-full iframe{height:100% !important;}
+
+.twitter-full iframe{}
+
+.instagram-full iframe{max-width: 100% !important;
+width: 100% !important;}
+
+.flickr-full{ background-color:#000;}
+.flickr-full iframe{max-width: 100% !important; width: 100% !important; height: 220px !important; /*height = 480? */}
+.vimeo-full iframe{max-width: 100% !important; 
+
+}
+.vine-full iframe{
+width:100%ß !important; 
+}
+
+
+
+.airbnb-full,.pinterest-full{ background-color:#000;}
+.airbnb-full img ,
+.pinterest-full img {
+width: 100% !important;
+height: inherit !important;
+/*height: 350px; */
+}
+
+.airbnb-full p,
+.pinterest-full p {
+	font-size:8px;
+	color: #fff;
+}
